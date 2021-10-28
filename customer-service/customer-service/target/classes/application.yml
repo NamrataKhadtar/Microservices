@@ -1,0 +1,19 @@
+server:
+ port: 7072
+
+
+
+spring:
+ application:
+  name: CUSTOMER-SERVICE
+ zipkin:
+  base-url: http://127.0.0.1:9411/
+
+
+
+resiliance4j.retry:
+ instances:
+  userService:
+   maxRetryAttempts: 3
+   maxDuration: 50000
+  
